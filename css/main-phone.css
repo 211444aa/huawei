@@ -1,0 +1,578 @@
+/*通用样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+body {
+	font-size: 0.2rem;
+	background-color: #F9F9F9;
+}
+b,
+em {
+	font-style: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+}
+/*矢量图标*/
+@font-face {
+  font-family: 'iconfont';  /* project id 1315665 */
+  src: url('http://at.alicdn.com/t/font_1315665_qb2fomerf2.eot');
+  src: url('http://at.alicdn.com/t/font_1315665_qb2fomerf2.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_1315665_qb2fomerf2.woff2') format('woff2'),
+  url('http://at.alicdn.com/t/font_1315665_qb2fomerf2.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_1315665_qb2fomerf2.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_1315665_qb2fomerf2.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 10px;
+  font-style: normal;
+  color: rgb(159,159,159);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.big-box {
+	width: 97%;
+	margin: 0 auto;
+}
+/*头部固定导航*/
+.flxed-nav {
+	width: 100%;
+	padding-top: 0.08rem;
+	font-size: 0.24rem;
+	background-color: #fff;
+	position: fixed;
+	z-index: 99;
+	overflow: hidden;
+	top: 0;
+}
+.flxed-nav .flxed-nav-top {
+	height: 0.72rem;
+	display: flex;
+	justify-content: space-around;
+}
+.flxed-nav .flxed-nav-top img {
+	width: auto;
+	height: 0.24rem;
+	margin-top: 0.14rem;
+}
+/*头部固定导航  搜索框*/
+.flxed-nav .flxed-nav-top .flxed-search {
+	width: 56%;
+	height: 0.56rem;
+	background-color: rgba(155,155,155,0.1);
+	border-radius: .1rem;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.flxed-search .iconfont {
+	width: 0.56rem;
+	line-height: 0.56rem;
+	text-align: center;
+	color: #C7C7C7;
+	font-size: 0.28rem;
+}
+.flxed-search li {
+	width: 2.8rem;
+	line-height: 0.56rem;
+	color:#CF0A2C;
+	font-size: 0.22rem;
+}
+/*头部固定导航  登录*/
+.flxed-nav .flxed-login {
+	width: 1.2rem;
+	line-height: 0.42rem;
+	margin-top: 0.1rem;
+}
+.flxed-login i {
+	font-size: 0.38rem;
+	color: #333;
+	font-weight: bold;
+	margin-right: 0.08rem;
+}
+.flxed-login a {
+	color: #4c4c4c;
+}
+/*头部固定导航  下半部分*/
+.flxed-nav-bottom {
+	height: 0.6rem;
+	line-height: 0.6rem;
+	margin: 0 auto;
+}
+.flxed-nav-bottom li {
+	height: 0.6rem;
+	float: left;
+	padding: 0 0.26rem;
+}
+.flxed-nav-bottom li a {
+	font-size: 0.29rem;
+	color: #777;
+	position: relative;
+}
+.flxed-nav-bottom li a.active {
+	color: #cc0e11;
+}
+.flxed-nav-bottom li a.active::after {
+	content: "";
+	display: block;
+    bottom: .2rem;
+    width: 85%;
+    height: .04rem;
+    border-radius: .05rem;
+    background-color: #cc0e11;
+    position: absolute;
+    top: 0.38rem;
+    left: 0.04rem;
+}
+/*轮播图*/
+.banner {
+	width: 6.2rem;
+	height: 2.6rem;
+	margin: 1.45rem auto 0;
+	position: relative;
+}
+.banner a {
+	position: absolute;
+	opacity: 0;
+}
+.banner a img {
+	width: 6.2rem;
+    border-radius: .2rem
+}
+.banner a.opacity-pic {
+	opacity: 1;
+	transition: 1s;
+}
+.banner ul {
+	width: 2rem;
+	height: 0.4rem;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.banner li {
+	float: left;
+	width: 0.09rem;
+	height: 0.09rem;
+	margin-right: 0.1rem;
+	border: .02rem solid #fff;
+	border-radius: 50%;
+}
+.bg-write {
+	background-color: #fff;
+}
+/*首页焦点图*/
+.backpic-squared {
+	height: 3rem;
+	padding: 0.1rem 0.15rem;
+}
+.backpic-squared-top {
+	line-height: 0.4rem;
+	display: flex;
+	justify-content: space-between;
+}
+.backpic-squared-top a {
+	width: 1.06rem;
+	color: #ACACAC;
+}
+.backpic-squared-bottom {
+	height: 2rem;
+	display: flex;
+	justify-content: space-between;
+}
+.backpic-squared-bottom a {
+	display: inline-block;
+	width: 1rem;
+	height: 1.5rem;
+	color: #9B9B9B;
+	box-sizing: border-box;
+	padding-top: 0.3rem;
+}
+.backpic-squared-bottom img {
+	width:0.72rem;
+	height: 0.72rem;
+	margin-bottom: 0.2rem;
+}
+.channel-headline {
+	width: 5.76rem;
+	height: 0.7rem;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.channel-headline img {
+	width: 0.88rem;
+	height: 0.2rem;
+}
+.channel-headline ul li {
+	width: 4rem;
+	line-height: 0.7rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.channel-headline a {
+	line-height: 0.7rem;
+	color: #999;
+}
+.channel-headline li a {
+	color: #4d4d4d;
+}
+/*限时购*/
+h3 {
+	width: 3.3rem;
+	height: 0.68rem;
+	margin: 0.2rem auto 0;
+	font-size: 0.28rem;
+	color: #4D4D4D;
+}
+h3 .iconfont {
+	font-size: 0.26rem;
+	color: #FA432A;
+}
+h3 .end {
+	font-size: 0.192rem;
+	color: #9b9b9b;
+}
+/*左右滑动轮播图*/
+.swiper {
+	height: 1.96rem;
+	overflow: hidden;
+	font-size: 0.192rem;
+}
+.swiper>div {
+	float: left;
+	margin: 0 0.06rem;
+	text-align: center;
+}
+.swiper>div div {
+	width: 1.32rem;
+	height: 1.52rem;
+	background: #fff;
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,0.05);
+    border-radius: .2rem;
+    margin-bottom: 0.1rem;
+}
+.swiper img {
+	width: 1.08rem;
+	height: 1.08rem;
+}
+.swiper a p {
+	color: #999;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+/*手机展示区*/
+.phone-list {
+	height: 12.04rem;
+	margin-top: 0.2rem;
+	background-color: #fff;
+}
+/*手机展示区  上面部分*/
+.phone-list-top {
+	height: 8.78rem;
+	background-color: #fff;
+}
+.phone-list-top li {
+	width: 3.06rem;
+	float: left;
+}
+.phone-list-top li:nth-of-type(1) {
+	margin-right: 0.04rem;
+}
+.phone-list-top img {
+	width: 3.06rem;
+	height: 2.16rem;
+}
+.phone-list-top .big-img img {
+	height: 4.34rem;
+	
+}
+/*手机展示区  下面部分*/
+.phone-list-bottom {
+	width: 100%;
+	height: 2.96rem;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+.phone-list-bottom>div {
+	width: 2.02rem;
+	height: 2.96rem;
+	background-color: #F6F6F6;
+}
+.phone-list-bottom img {
+	display: block;
+	margin: 0 auto 0.1rem;
+	width: 1.42rem;
+}
+/*爆款  新品*/
+.top-new-product {
+	width: 0.74rem;
+	height: 0.26rem;
+	line-height: 0.26rem;
+	margin: 0 auto 0.02rem;
+	text-align: center;
+	color: #fff;
+	border-radius: 0 0 .08rem .08rem;
+}
+.bg-color-blue {
+	background-color: #68beff;
+}
+.bg-color-red {
+	background-color: #ff6a6e;
+}
+.phone-list-bottom span {
+	color: #333;
+	font-size: 0.212rem;
+}
+.phone-list-bottom p {
+	color: #9b9b9b;
+	padding: 0.06rem 0 0.04rem;
+}
+b {
+	font-size: 11px;
+	color: #CA141D;
+	font-weight: 400;
+}
+del {
+	color: #999;
+	font-size: 11px;
+}
+/*精品推荐*/
+.boutique {
+	height: 4.92rem;
+	background-color: #fff;
+}
+h2 {
+	text-align: center;
+	font-size: 0.32rem;
+	padding: 0.2rem 0 0.24rem;
+}
+.boutique-phone,
+.phone-products-smallpic {
+	height: 3.94rem;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+.phone-products-smallpic {
+	margin-top: 0.2rem;
+}
+.boutique-phone>div,
+.phone-products-smallpic>div {
+	width: 2rem;
+}
+.boutique-phone>div>div,
+.phone-products-smallpic>div>div {
+	height: 2.26rem;
+	background-color: #F9F9F9;
+	border-radius: 0.12rem;
+}
+.boutique-phone>div>div p,
+.phone-products-smallpic>div>div p {
+	height: 0.34rem;
+	line-height: 0.34rem;
+	position: relative;
+	background-color: #F0F0F0;
+	color: #9b9b9b;
+	font-size: 0.19rem;
+	border-radius: 0 0 0.12rem 0.12rem;
+	bottom: -7px;
+	padding: 0 0.16rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.boutique-phone>div>p,
+.phone-products-smallpic>div>p {
+	width: 2rem;
+	margin:  0.16rem auto 0.1rem;
+	color: #333;
+	font-size: 0.2rem;
+}
+.boutique-phone img,
+.phone-products-smallpic img {
+	width: 1.48rem;
+}
+/*手机部分*/
+.phone {
+	height: 13.2rem;
+	background-color: #fff;
+	margin-top: 0.2rem;
+}
+.phone-products {
+	height: 8.26rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.phone-products>div {
+	height: 4.1rem;
+	text-align: center;
+}
+.phone-products .bg-img {
+	width: 3.04rem;
+	height: 3.04rem;
+	border-radius: 0.25rem;
+	position: relative;
+	background: url(https://res0.vmallres.com/pimages//wapFrontLocation/content/y0aZzofSAhUQRkedYkq3.jpg) 0 0/100% no-repeat;
+}
+.phone-products a {
+	display: inline-block;
+	height: 4.5rem;
+}
+/*图片上的文字*/
+.phone-products .pic-font {
+	position: absolute;
+	width: 3.04rem;
+	height: 0.42rem;
+	line-height: 0.42rem;
+	background: rgba(0,0,0,0.2);
+	color: rgba(255,255,255,0.9);
+	border-radius: 0 0 0.25rem 0.25rem;
+	bottom: 0;
+}
+.phone-products a>p {
+	width: 2.2rem;
+	color: #333;
+	font-size: 0.23rem;
+	margin: 0.15rem auto 0.06rem;
+}
+.phone-products .top-new-product1 {
+	position: absolute;
+	padding: 0.014rem 0.2rem;
+	top: 0;
+	left: 50%;
+	margin-left: -0.4rem;
+	color: #fff;
+	font-size: 0.16rem;
+}
+.phone-products .margin-left {
+	margin-left: -0.68rem;
+}
+/*发现更多手机*/
+.phone-products flooter {
+	height: 0.76rem;
+	line-height: 0.76rem;
+	text-align: center;
+	margin-top: 0.03rem;
+}
+.phone-products flooter a {
+	display: inline;
+	font-size: 0.24rem;
+	color: #4a4a4a;
+}
+
+/*底部*/
+.bottom {
+	height: 3.62rem;
+	margin-top: 0.24rem;
+	background-color: #fff;
+	overflow: hidden;
+	padding-bottom: 1.2rem;
+}
+/*登录-反馈部分*/
+.login-feedback {
+	height: 0.7rem;
+	text-align: center;
+	margin: 0.2rem 0;
+	position: relative;
+}
+.login-feedback a {
+	color: #333;
+	font-size: 0.25rem;
+	padding: 0 0.4rem;
+}
+.login-feedback .border-right::after {
+	content: '';
+	position: absolute;
+	top: 0.05rem;
+	left: 3.1rem;
+	height: 0.22rem;
+	width: 0.02rem;
+	background-color: #eaeaea;
+}
+/*客户端-触屏*/
+.touch {
+	height: 1.22rem;
+	text-align: center;
+}
+.touch a {
+	display: inline-block;
+	padding: 0 0.24rem;
+}
+.touch a .black-color {
+	color: #4D4D4D;
+}
+.touch a i {
+	font-size: 0.5rem;
+}
+.touch a p {
+	font-size: 0.21rem;
+    color: #9b9b9b;
+}
+/*政策*/
+.copyrigh {
+	height: 1.7rem;
+	text-align: center;
+	color: #9b9b9b;
+	font-size: 0.192rem;
+}
+.copyrigh a {
+	color: #9b9b9b;
+}
+.copyrigh a.font-size {
+	font-size: 0.21rem;
+	padding: 0.2rem 0.12rem;
+}
+/*返回顶部*/
+.back {
+	position: fixed;
+	bottom: 1.2rem;
+	right: 0.1rem;
+	display: none;
+}
+.back img {
+	width: 0.7rem;
+	height: 0.7rem;
+}
+/*底部固定导航*/
+.bottom-fxed {
+	height: 0.9rem;
+	position: fixed;
+	bottom: -0.03rem;
+	background-color: #fff;
+}
+.bottom-fxed a {
+	display: inline-block;
+	width: 1.19rem;
+	height: 0.9rem;
+	background: url(https://res.vmallres.com/nwap/20190615/images/echannelWap/icon/icon55_new.png) no-repeat center top;
+	background-size: 500% 1.8rem;
+}
+.bottom-fxed a:nth-child(1) {
+	background-position: 0.01rem -0.85rem;
+}
+.bottom-fxed a:nth-child(2) {
+	background-position: -1.1rem 0;
+}
+.bottom-fxed a:nth-child(3) {
+	background-position: -2.4rem 0;
+}
+.bottom-fxed a:nth-child(4) {
+	background-position: -3.6rem 0;
+}
+.bottom-fxed a:nth-child(5) {
+	background-position: -4.8rem 0;
+}
